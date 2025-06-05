@@ -17,8 +17,10 @@ body {
 }
 
 .header {
+    border-radius: 25px;
+    box-shadow: #000000 0px 0px 2px;
     border: 2px solid #000000;
-    padding: 20px;
+    padding: 20px 0px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -41,20 +43,28 @@ h1 {
 }
 
 .product {
+    border: #000000 1px solid;
+    box-shadow: #000000 0px 0px 5px;
+    border-radius: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
+    box-shadow: #000000 0px 5px 10px;
 }
 
 .product-img {
     width: 150px;
     height: 150px;
-    border: 1px solid #000000;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     background-color: #FFFFFF;
     position: relative;
     overflow: hidden;
@@ -71,7 +81,9 @@ h1 {
 }
 
 .product-price {
-    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -119,6 +131,7 @@ h1 {
 }
 
 .btn {
+    border-radius: 4px;
     display: block;
     width: 100%;
     padding: 15px;
@@ -134,9 +147,43 @@ h1 {
     background-color: #8F3A3E;
 }
 
+.btn-total:hover{
+    background-color: #632326;
+}
+
+.btn-total:active {
+    transform: translateY(1px);
+    background-color: #4b1a1c;
+}
+
 .btn-clear {
     background-color: #C3DC4B;
     color: black;
+}
+
+.btn-clear:hover {
+    background-color: #83952c;
+    color: black;
+}
+
+.btn-clear:active {
+    transform: translateY(1px);
+    background-color: #6b7a24;
+}
+
+.btn-add {
+    color: white;
+    background-color: #939393;
+}
+
+.btn-add:hover {
+    color: white;
+    background-color: #4e4e4e;
+}
+
+.btn-add:active {
+    transform: translateY(1px);
+    background-color: #3a3a3a;
 }
 
 .product-amount{
@@ -169,6 +216,7 @@ h1 {
 }
 
 .product-add{
+    border-radius: 5px;
     user-select: none;
     display: block;
     max-width: 100%;
@@ -196,4 +244,56 @@ h1 {
     background-color: #DDDDDD;
     text-align: center;
     margin-top: 60px;
+}
+
+.create-div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    padding: 32px 24px;
+    z-index: 1000;
+    min-width: 300px;
+    text-align: center;
+}
+
+.create-div input[type="text"],
+.create-div input[type="number"] {
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0 16px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.label {
+    font-weight: bold;
+    margin: 8px 0 4px 0;
+    color: #333;
+    text-align: left;
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 16px;
+    background: #939393;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 12px;
+    transition: background 0.2s;
+    user-select: none;
+}
+
+.button:hover {
+    background: #4e4e4e;
+}
+
+.button:active {
+    transform: translateY(1px);
+    background: #3a3a3a;
 }
